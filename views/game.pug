@@ -80,18 +80,21 @@ html(lang="en")
                 p#avg_moves
             dialog#player_profile_settings.player_modal
                 span#player_profile_settings_x.close &times;
-                form(action="/player_profile/change/nick" id="change_nick") 
+                form(action="/player_profile/change/nick" id="change_nick" class="profile_settings_form") 
                     label(for="new_nick")  New nick:
+                    br
                     input(type="text" name="new_nick" id="new_nick" required)
                     button(type="submit") Change nick
                     p#change_nick_message
-                form(action="/player_profile/change/email" id="change_email") 
+                form(action="/player_profile/change/email" id="change_email" class="profile_settings_form") 
                     label(for="new_email")  New email:
+                    br
                     input(type="email" name="new_email" id="new_email" required)
                     button(type="submit") Change email
                     p#change_email_message
-                form(action="/player_profile/change/photo" id="change_photo")
+                form(action="/player_profile/change/photo" id="change_photo" class="profile_settings_form")
                     label(for="new_photo")  New photo:
+                    br
                     input(type="file" id="new_photo" accept="image/*" required)
                     button(type="submit") Upload photo
                     p#change_photo_message

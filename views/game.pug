@@ -1,0 +1,133 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/style/game_style.css")
+        title 2048 Clone
+    body
+        #logout
+            a(href="/logout")
+                img(src="/img/logout.png", alt="logout icon", class="logout_icon")
+        #start_page.start_page
+            h1 2048 CLONE
+            button#start_button PRESS TO PLAY
+        #win_modal.modal
+            .modal-content
+                span#win_lose_modal.close &times;
+                p You have WON!
+                button#win_modal_continue.modal_button Continue
+                button#win_modal_home.modal_button Home page
+        #lose_modal.modal
+            .modal-content
+                span#close_lose_modal.close &times;
+                p Game over :(
+                button#lose_modal_restart.modal_button Restart
+                button#lose_modal_home.modal_button Home page
+        #game.hidden
+            .nav_buttons
+                button(class="show_player buttons") Show player profile
+                button(class="show_leaderboard buttons") Show leaderboard
+                button(class="show_game buttons") Show game 
+            .buttons_div
+                button#restart_button(class="buttons restart_button") Restart
+                button#home_page(class="buttons homepage_button") Home page
+            #scoreboard
+                #score_box 
+                    p Score:
+                    p#score
+                #moves_box
+                    p Moves:
+                    p#moves
+            #grid.grid
+                #tile00.tile_shape
+                #tile01.tile_shape
+                #tile02.tile_shape
+                #tile03.tile_shape
+
+                #tile10.tile_shape
+                #tile11.tile_shape
+                #tile12.tile_shape
+                #tile13.tile_shape
+
+                #tile20.tile_shape
+                #tile21.tile_shape
+                #tile22.tile_shape
+                #tile23.tile_shape
+
+                #tile30.tile_shape
+                #tile31.tile_shape
+                #tile32.tile_shape
+                #tile33.tile_shape
+
+        #player_profile.hidden
+            .nav_buttons
+                button(class="show_player buttons") Show player profile
+                button(class="show_leaderboard buttons") Show leaderboard
+                button(class="show_game buttons") Show game
+            .player_profile_upper
+                h1#nick
+                img#player_photo.player_photo(alt="profile photo" width="100" height="100")
+                img#profile_settings_icon(src="/img/profile_settings.png", alt="profile settings icon") 
+            .player_profile_items
+                p Email:
+                p#email
+                p Wins: 
+                p#wins
+                p Average score: 
+                p#avg_score
+                p Average moves: 
+                p#avg_moves
+            dialog#player_profile_settings.player_modal
+                span#player_profile_settings_x.close &times;
+                form(action="/player_profile/change/nick" id="change_nick") 
+                    label(for="new_nick")  New nick:
+                    input(type="text" name="new_nick" id="new_nick" required)
+                    button(type="submit") Change nick
+                    p#change_nick_message
+                form(action="/player_profile/change/email" id="change_email") 
+                    label(for="new_email")  New email:
+                    input(type="email" name="new_email" id="new_email" required)
+                    button(type="submit") Change email
+                    p#change_email_message
+                form(action="/player_profile/change/photo" id="change_photo")
+                    label(for="new_photo")  New photo:
+                    input(type="file" id="new_photo" accept="image/*" required)
+                    button(type="submit") Upload photo
+                    p#change_photo_message
+            
+
+        #leaderboard(class="hidden leaderboard")
+            .nav_buttons
+                button(class="show_player buttons") Show player profile
+                button(class="show_leaderboard buttons") Show leaderboard
+                button(class="show_game buttons") Show game
+            table
+                thead#leaderboard_head
+                    tr
+                        th No.
+                        th Player
+                        th Highscore
+                        th Moves
+                        th Field size
+                tbody#leaderboard_body
+            #table_buttons
+                button#first_page &#706;&#706;
+                button#prev_page &#706;
+                button#next_page &#707;
+                button#last_page &#707;&#707;
+                p#page_num
+            dialog#player_profile_modal(class="player_modal")
+                span#player_profile_modal_x.close &times;
+                .player_modal_content
+                    h1#modal_nick
+                    img#player_photo_modal.player_photo(alt="profile photo" width="100" height="100")
+                    .stats
+                        p Wins: 
+                        p#modal_wins
+                        p Average score: 
+                        p#modal_avg_score
+                        p Average moves: 
+                        p#modal_avg_moves
+
+        script(type="application/javascript" src="/js/script.js")

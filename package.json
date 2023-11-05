@@ -1,0 +1,32 @@
+{
+  "name": "2048_backend",
+  "version": "1.0.0",
+  "description": "backend for 2048 game clone, provides access to MongoDB leaderboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Michal Mitro",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "helmet": "^7.0.0",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.5.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.6",
+    "passport": "^0.5.3",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

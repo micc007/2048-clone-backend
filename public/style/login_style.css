@@ -1,0 +1,96 @@
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(212,212,212,1) 35%, rgba(212,212,212,1) 65%, rgba(255,255,255,1) 100%);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    color: rgb(50, 50, 50);
+}
+
+.logout_icon {
+    top:0;
+    right:0;
+    position: absolute;
+    width: 40px;
+    margin: 10px 10px 0 0;
+}
+
+#message {
+    background-color: rgb(255, 140, 140);
+    width: 100%;
+    text-align: center;
+}
+
+#container {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 370px;
+}
+
+#container a {
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+}
+
+#container label {
+    font-size: 20px;
+}
+
+#container input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 0.5em;
+}
+
+#container input:focus {
+    outline: none;
+    border-color: hsl(200, 0%, 30%);
+    border-style: solid;
+  }
+
+#container button {
+    border: 2px solid rgba(0, 180, 255, 1);
+    border-radius: 0.5em;
+    padding: 1rem;
+    font-size: 20px;
+    color: rgb(50, 50, 50);
+    background-color: white;
+}
+
+#container button:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: rgba(0, 180, 255, 1);
+    color: white;
+    border-color: white;
+}
+
+#links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(50, 50, 50);
+}
+
+#links a:hover {
+    transition: 0.2s;
+    color: rgba(0, 180, 255, 1);
+}
+
+.reg_link {
+    float: left;
+}
+
+.forgot_pass_link {
+    float: right;
+}

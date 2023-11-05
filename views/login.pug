@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/style/login_style.css")
+        title 2048 Clone | Login
+    body
+        #container
+            a(href="/login")
+                h1 2048 Clone
+            a(href="/login-google")
+                img#google_login(src="/img/google_login_dark_2x.png", alt="google login")
+            form(action="/login" method="POST")
+                label#email_label(for="nick") Email
+                input#email(type="email" name="email")
+                label#password_label(for="password") Password
+                input#password(type="password" name="password")
+                button(type="submit") Log in
+                p#message=messages.error
+                #links
+                    a(href="/registration").reg_link Registration  
+                    a(href="/forgot_password").forgot_pass_link Forgot password

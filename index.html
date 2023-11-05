@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/game_style.css">
+    <title>2048 Clone</title>
+</head>
+<body>
+    <div id="start_page" class="start_page">
+        <h1>2048 CLONE</h1>
+        <button id="start_button">PRESS TO PLAY</button>
+    </div>
+    <div id="win_modal" class="modal">
+        <div class="modal-content">
+          <span id="win_lose_modal" class="close">&times;</span>
+          <p>You have WON!</p>
+        </div>
+    </div>
+    <div id="lose_modal" class="modal">
+        <div class="modal-content">
+          <span id="close_lose_modal" class="close">&times;</span>
+          <p>Game over :(</p>
+        </div>
+    </div>
+    <div id="game" class="hidden">
+        <div class="buttons_div">
+            <button id="restart_button" class="buttons restart_button">Restart</button>
+            <button id="home_page" class="buttons homepage_button">Home page</button>
+        </div>
+        <div id="scoreboard">
+            <div id="score_box">
+                <p>Score: </p>
+                <p id="score"></p>
+            </div>
+            <div id="moves_box">
+                <p>Moves:</p>
+                <p id="moves"></p>
+            </div>
+        </div>
+        <div id="grid" class="grid">
+            <div id="tile00" class="tile_shape"></div>
+            <div id="tile01" class="tile_shape"></div>
+            <div id="tile02" class="tile_shape"></div>
+            <div id="tile03" class="tile_shape"></div>
+
+            <div id="tile10" class="tile_shape"></div>
+            <div id="tile11" class="tile_shape"></div>
+            <div id="tile12" class="tile_shape"></div>
+            <div id="tile13" class="tile_shape"></div>
+
+            <div id="tile20" class="tile_shape"></div>
+            <div id="tile21" class="tile_shape"></div>
+            <div id="tile22" class="tile_shape"></div>
+            <div id="tile23" class="tile_shape"></div>
+            
+            <div id="tile30" class="tile_shape"></div>
+            <div id="tile31" class="tile_shape"></div>
+            <div id="tile32" class="tile_shape"></div>
+            <div id="tile33" class="tile_shape"></div>
+        </div>
+    </div>
+
+    <script type="application/javascript" src="/script.js"></script>
+</body>
+</html>

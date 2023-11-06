@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 const mailer = require("../config/mailer.js");
 const { uploadPlayerPhoto } = require("../config/multer.js");
 
@@ -79,6 +81,16 @@ const changePhotoController = (req, res) => {
             }
         }
         else {
+
+            if(req.user.pic !== null){
+                const oldFileRoute = path.join(__dirname, '../storage/photos/', req.user.pic);
+                
+                fs.unlink(oldFileRoute, (err) => {
+                    if(err) throw err;
+                    console.log(`Old photo file - ${req.user.pic} was succesfully deleted`);
+                });
+            }
+
             User.updateOne({_id: req.user.id}, {pic: req.files.new_photo[0].filename}).then(() => {
                 res.send(JSON.stringify("okej"));
             });
